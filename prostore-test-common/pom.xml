@@ -1,0 +1,20 @@
+<project>
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>ru.programstore.prostore</groupId>
+        <artifactId>prostore</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>prostore-test-common</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>ru.programstore.prostore</groupId>
+            <artifactId>prostore-core</artifactId>
+            <version>${project.version}</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+</project>

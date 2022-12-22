@@ -1,0 +1,23 @@
+server:
+  port: ${PORT:9001}
+logging:
+  level:
+    ru.programstore.prostore: DEBUG
+spring:
+  application:
+    name: prostore-test-service-1.0
+  kafka:
+    bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS:localhost:9092}
+    consumer:
+      group-id: ${random.uuid}
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_DEFAULT_ZONE:http://localhost:8761/eureka}
+  instance:
+    preferIpAddress: true
+prostore:
+  kafka:
+    topic: events
+    partitions: 10
+    replicationFactor: 10

@@ -1,0 +1,24 @@
+<project>
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>ru.programstore.prostore</groupId>
+        <artifactId>prostore</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>spring-boot-prostore-kafka-starter</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>ru.programstore.prostore</groupId>
+            <artifactId>spring-boot-prostore-starter</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>ru.programstore.prostore</groupId>
+            <artifactId>prostore-kafka</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
+</project>
