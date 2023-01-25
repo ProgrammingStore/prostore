@@ -1,0 +1,48 @@
+<project>
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>ru.programstore.prostore</groupId>
+        <artifactId>prostore</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>prostore-test-client</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>ru.programstore.prostore</groupId>
+            <artifactId>spring-boot-prostore-starter</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>ru.programstore.prostore</groupId>
+            <artifactId>spring-boot-prostore-eureka-starter</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>ru.programstore.prostore</groupId>
+            <artifactId>spring-boot-prostore-mongo-starter</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>ru.programstore.prostore</groupId>
+            <artifactId>prostore-test-common</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${spring-boot.version}</version>
+            </plugin>
+        </plugins>
+    </build>
+</project>

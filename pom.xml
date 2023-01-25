@@ -1,0 +1,66 @@
+<project>
+   <modelVersion>4.0.0</modelVersion>
+
+   <groupId>ru.programstore.prostore</groupId>
+   <artifactId>prostore</artifactId>
+   <version>1.0-SNAPSHOT</version>
+   <packaging>pom</packaging>
+
+   <modules>
+      <module>prostore-core</module>
+      <module>prostore-eureka</module>
+      <module>prostore-mongo</module>
+      <module>prostore-kafka</module>
+      <module>prostore-test-common</module>
+      <module>prostore-test-service</module>
+      <module>prostore-test-client</module>
+      <module>spring-boot-prostore-starter</module>
+      <module>spring-boot-prostore-eureka-starter</module>
+      <module>spring-boot-prostore-mongo-starter</module>
+      <module>spring-boot-prostore-kafka-starter</module>
+      <module>prostore-eureka-server</module>
+   </modules>
+
+   <properties>
+      <maven.compiler.source>17</maven.compiler.source>
+      <maven.compiler.target>17</maven.compiler.target>
+      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+      <spring-boot.version>2.7.5</spring-boot.version>
+      <spring-cloud.version>2021.0.5</spring-cloud.version>
+   </properties>
+
+   <dependencyManagement>
+      <dependencies>
+         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-dependencies</artifactId>
+            <version>${spring-boot.version}</version>
+            <type>pom</type>
+            <scope>import</scope>
+         </dependency>
+         <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-parent</artifactId>
+            <version>${spring-cloud.version}</version>
+            <type>pom</type>
+            <scope>import</scope>
+         </dependency>
+      </dependencies>
+   </dependencyManagement>
+
+   <dependencies>
+      <dependency>
+         <groupId>org.projectlombok</groupId>
+         <artifactId>lombok</artifactId>
+      </dependency>
+      <dependency>
+         <groupId>org.apache.httpcomponents</groupId>
+         <artifactId>httpclient</artifactId>
+         <version>4.5.14</version>
+      </dependency>
+      <dependency>
+         <groupId>org.slf4j</groupId>
+         <artifactId>slf4j-api</artifactId>
+      </dependency>
+   </dependencies>
+</project>
